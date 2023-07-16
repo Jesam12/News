@@ -84,7 +84,7 @@ const fetchGeneralNews = async () => {
         newsDataArr = myJson.articles;
     } else {
         // handle errors
-       // console.log(response.status, response.statusText);
+       console.log(response.status, response.statusText);
         newsdetails.innerHTML = "<h5>No data found.</h5>"
         return;
     }
@@ -100,7 +100,7 @@ const fetchBusinessNews = async () => {
         newsDataArr = myJson.articles;
     } else {
         // handle errors
-       // console.log(response.status, response.statusText);
+       console.log(response.status, response.statusText);
         newsdetails.innerHTML = "<h5>No data found.</h5>"
         return;
     }
@@ -117,7 +117,7 @@ const fetchEntertainmentNews = async () => {
         newsDataArr = myJson.articles;
     } else {
         // handle errors
-       // console.log(response.status, response.statusText);
+       console.log(response.status, response.statusText);
         newsdetails.innerHTML = "<h5>No data found.</h5>"
         return;
     }
@@ -133,7 +133,7 @@ const fetchSportsNews = async () => {
         newsDataArr = myJson.articles;
     } else {
         // handle errors
-       // console.log(response.status, response.statusText);
+        console.log(response.status, response.statusText);
         newsdetails.innerHTML = "<h5>No data found.</h5>"
         return;
     }
@@ -149,7 +149,7 @@ const fetchTechnologyNews = async () => {
         newsDataArr = myJson.articles;
     } else {
         // handle errors
-        //console.log(response.status, response.statusText);
+        console.log(response.status, response.statusText);
         newsdetails.innerHTML = "<h5>No data found.</h5>"
         return;
     }
@@ -169,7 +169,7 @@ const fetchQueryNews = async () => {
         newsDataArr = myJson.articles;
     } else {
         //error handle
-       // console.log(response.status, response.statusText);
+       console.log(response.status, response.statusText);
         newsdetails.innerHTML = "<h5>No data found.</h5>"
         return;
     }
@@ -181,10 +181,10 @@ function displayNews() {
 
     newsdetails.innerHTML = "";
 
-    // if(newsDataArr.length == 0) {
-    //     newsdetails.innerHTML = "<h5>No data found.</h5>"
-    //     return;
-    // }
+     if(newsDataArr.length == 0) {
+         newsdetails.innerHTML = "<h5>No data found.</h5>"
+         return;
+     }
 
     newsDataArr.forEach(news => {
 
